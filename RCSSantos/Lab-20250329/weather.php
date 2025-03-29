@@ -7,6 +7,11 @@ $apiUrl = "http://api.weatherstack.com/current?access_key={$apiKey}&query={$loca
 // Initialize cURL session
 $ch = curl_init();
 
+
+var_dump($ch);
+die();
+
+
 // Set cURL options
 curl_setopt($ch, CURLOPT_URL, $apiUrl); curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 
@@ -67,10 +72,8 @@ from { opacity: 0; } to { opacity: 1; }
 
 ?>
 </h2>
-  <?php 
-    echo $weatherData['location']['name'] . ", " . $weatherData['location']['country']; 
-    ?>
-</h2>
+echo $weatherData['location']['name'] . ", " .
+$weatherData['location']['country'];
 
 
 <p id="localtime">Local Time:
