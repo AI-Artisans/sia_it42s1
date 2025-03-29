@@ -95,8 +95,32 @@ src="<?php echo $weatherData['current']['weather_icons'][0]; ?>" alt="Weather Ic
 </p>
 <p>
 
+<strong>Temperature:</strong>
+<span id="temperature">
+<?php echo $weatherData['current']['temperature']; ?>
+</span>°C
 
 
+
+
+
+
+</p>
+<p>
+<strong>Feels Like:</strong>
+<span id="feelslike">
+<?php echo $weatherData['current']['feelslike']; ?>
+</span>°C
+
+</p>
+<p>
+
+
+
+<strong>Humidity:</strong>
+<span id="humidity">
+<?php echo $weatherData['current']['humidity']; ?>
+</span>%
 
 
 
@@ -108,24 +132,13 @@ src="<?php echo $weatherData['current']['weather_icons'][0]; ?>" alt="Weather Ic
 
 
 
-
-
-</p>
-<p>
-
-
-
-
-
-
-
-
-</p>
-<p>
-
-
-
-
+<strong>Wind:</strong>
+<span id="wind">
+<?php echo $weatherData['current']['wind_speed']; ?>
+</span> km/h (
+<span id="wind-dir">
+<?php echo $weatherData['current']['wind_dir']; ?>
+</span>)
 
 
 
@@ -144,35 +157,15 @@ src="<?php echo $weatherData['current']['weather_icons'][0]; ?>" alt="Weather Ic
 
 
 
-<strong>Temperature:</strong>
-<span id="temperature">
-<?php echo $weatherData['current']['temperature']; ?>
-</span>°C
 
 
 
 
-<strong>Feels Like:</strong>
-<span id="feelslike">
-<?php echo $weatherData['current']['feelslike']; ?>
-</span>°C
-
-
-<strong>Humidity:</strong>
-<span id="humidity">
-<?php echo $weatherData['current']['humidity']; ?>
-</span>%
 
 
 
 
-<strong>Wind:</strong>
-<span id="wind">
-<?php echo $weatherData['current']['wind_speed']; ?>
-</span> km/h (
-<span id="wind-dir">
-<?php echo $weatherData['current']['wind_dir']; ?>
-</span>)
+
 
 
 
