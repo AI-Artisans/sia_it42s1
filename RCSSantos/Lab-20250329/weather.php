@@ -70,7 +70,7 @@ from { opacity: 0; } to { opacity: 1; }
   <?php 
     echo $weatherData['location']['name'] . ", " . $weatherData['location']['country']; 
     ?>
-</h2>
+
 
 
 <p id="localtime">Local Time:
@@ -88,57 +88,9 @@ src="<?php echo $weatherData['current']['weather_icons'][0]; ?>" alt="Weather Ic
 <p id="weather-description">
 <?php echo $weatherData['current']['weather_descriptions'][0]; ?>
 
-
+</h2>
 </p>
 <p>
-
-
-
-
-
-
-
-
-</p>
-<p>
-
-
-
-
-
-
-</p>
-<p>
-
-
-
-
-
-
-
-
-</p>
-<p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</p>
-</div>
-</body>
-</html>
-
-
 
 
 <strong>Temperature:</strong>
@@ -147,7 +99,8 @@ src="<?php echo $weatherData['current']['weather_icons'][0]; ?>" alt="Weather Ic
 </span>°C
 
 
-
+</p>
+<p>
 
 <strong>Feels Like:</strong>
 <span id="feelslike">
@@ -155,12 +108,20 @@ src="<?php echo $weatherData['current']['weather_icons'][0]; ?>" alt="Weather Ic
 </span>°C
 
 
+
+</p>
+<p>
+
 <strong>Humidity:</strong>
 <span id="humidity">
 <?php echo $weatherData['current']['humidity']; ?>
 </span>%
 
 
+
+
+</p>
+<p>
 
 
 <strong>Wind:</strong>
@@ -172,4 +133,7 @@ src="<?php echo $weatherData['current']['weather_icons'][0]; ?>" alt="Weather Ic
 </span>)
 
 
-
+</p>
+</div>
+</body>
+</html>
