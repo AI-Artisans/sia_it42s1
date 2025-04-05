@@ -4,7 +4,7 @@ header("Content-Type: application/json");
 
 $servername = "localhost";
 $username = "root";
-$password = "root";
+$password = "";
 $dbname = "20250405-testdb";
 $conn = new mysqli($servername, $username, $password, $dbname);
 
