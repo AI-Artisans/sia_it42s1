@@ -1,27 +1,18 @@
 <?php
-$apiKey = "0bbe24fa6f3618a236e0ea4c75d44427";
-$location = "German";
-$apiUrl = "http://api.weatherstack.com/current?access_key={$apiKey}&query={$location}";
-
+$apiKey = "<insert your API Key here>";
+$location = "Japan";
+$apiUrl = "https://api.weatherstack.com/current?access_key=7f803596fb5c621bfee58d85626b1e0f&query=Japan";
 
 // Initialize cURL session
 $ch = curl_init();
 
-
-var_dump($ch);
-die();
-
-
 // Set cURL options
 curl_setopt($ch, CURLOPT_URL, $apiUrl); curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-
 
 // Execute cURL session and store the response
 $response = curl_exec($ch);
 
-
 // Close cURL session curl_close($ch);
-
 
 // Decode the JSON response
 $weatherData = json_decode($response, true);
@@ -67,47 +58,25 @@ from { opacity: 0; } to { opacity: 1; }
 
 
 
-
-
-
 ?>
 </h2>
-  <?php 
-    echo $weatherData['location']['name'] . ", " . $weatherData['location']['country']; 
-    ?>
-</h2>
-
+echo $weatherData['location']['name'] . ", " .
+$weatherData['location']['country'];
 
 <p id="localtime">Local Time:
 <?php echo $weatherData['location']['localtime']; ?>
 
-
 </p>
 <img
-
 
 id="weather-icon" class="weather-icon"
 src="<?php echo $weatherData['current']['weather_icons'][0]; ?>" alt="Weather Icon">
 
-
 <p id="weather-description">
 <?php echo $weatherData['current']['weather_descriptions'][0]; ?>
 
-
 </p>
 <p>
-
-
-
-
-
-
-
-
-</p>
-<p>
-
-
 
 
 
@@ -117,20 +86,14 @@ src="<?php echo $weatherData['current']['weather_icons'][0]; ?>" alt="Weather Ic
 
 
 
-
-
-
-
-
 </p>
 <p>
 
 
 
 
-
-
-
+</p>
+<p>
 
 
 
@@ -144,14 +107,10 @@ src="<?php echo $weatherData['current']['weather_icons'][0]; ?>" alt="Weather Ic
 </html>
 
 
-
-
 <strong>Temperature:</strong>
 <span id="temperature">
 <?php echo $weatherData['current']['temperature']; ?>
 </span>°C
-
-
 
 
 <strong>Feels Like:</strong>
@@ -159,13 +118,10 @@ src="<?php echo $weatherData['current']['weather_icons'][0]; ?>" alt="Weather Ic
 <?php echo $weatherData['current']['feelslike']; ?>
 </span>°C
 
-
 <strong>Humidity:</strong>
 <span id="humidity">
 <?php echo $weatherData['current']['humidity']; ?>
 </span>%
-
-
 
 
 <strong>Wind:</strong>
@@ -175,9 +131,3 @@ src="<?php echo $weatherData['current']['weather_icons'][0]; ?>" alt="Weather Ic
 <span id="wind-dir">
 <?php echo $weatherData['current']['wind_dir']; ?>
 </span>)
-
-
-</p>
-</div>
-</body>
-</html>
