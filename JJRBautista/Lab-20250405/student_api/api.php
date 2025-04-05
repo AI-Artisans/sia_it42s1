@@ -28,6 +28,7 @@ $students = [];
 while ($row = $result->fetch_assoc()) {
 $students[] = $row;
 }
+
 $stmt->close();
 $conn->close();
 
