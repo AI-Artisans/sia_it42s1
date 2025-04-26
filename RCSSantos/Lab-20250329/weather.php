@@ -7,6 +7,11 @@ $apiUrl = "http://api.weatherstack.com/current?access_key={$apiKey}&query={$loca
 // Initialize cURL session
 $ch = curl_init();
 
+
+var_dump($ch);
+die();
+
+
 // Set cURL options
 curl_setopt($ch, CURLOPT_URL, $apiUrl); curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 
@@ -172,4 +177,7 @@ src="<?php echo $weatherData['current']['weather_icons'][0]; ?>" alt="Weather Ic
 </span>)
 
 
-
+</p>
+</div>
+</body>
+</html>
